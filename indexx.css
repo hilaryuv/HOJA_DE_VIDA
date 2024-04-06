@@ -1,0 +1,433 @@
+@font-face {
+    font-family: "Klint Bold";
+    src: url("/assets/fonts/klint/Klint Bold.otf");
+}
+@font-face {
+    font-family: "Klint Light";
+    src: url("/assets/fonts/klint/Klint Light.otf");
+}
+@font-face {
+    font-family: "Klint Regular";
+    src: url("/assets/fonts/klint/Klint Regular.otf");
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F8E0E0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Klint Regular";
+}
+h1 {
+    font-family: "Klint Bold";
+}
+h2 {
+    font-family: "Klint Light";
+}
+h3 {
+    font-family: "Klint Regular";
+}
+header {
+    background-color: #F8E0E0;
+    height: auto;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+}
+header h1 {
+    font-family: "Klint Light";
+    font-size: 0.8em;
+    padding: 1.2em;
+    margin: 1em;
+    margin-left: 6em;
+}
+/*................seccion inicial*/
+.banner_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    color: #ffff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("portada.jpeg");
+    background-size: cover;
+}
+.banner_section h1{
+    font-size: 4em;
+    margin: 0;
+}
+.banner_section h2{
+    font-size: 2.5em;
+    margin: 0.5em;
+}
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+    }
+    50% {
+        opacity: 1;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    100% {
+        opacity: 0;
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+}
+.banner_section span{
+    display: inline-block;
+    position: absolute;
+    left: 2vw;
+    top: 80vh;
+    animation: reveal 4s infinite;
+}
+
+/*................seccion sobre mi*/
+.biography_panel {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    color: #637372;
+}
+.biography_panel h2{
+    font-size: 1.2em;
+    padding-bottom: 2.2rem;
+    font-style: italic;
+}
+.biography_panel div{
+    display: flex;
+    height: auto;
+    width: auto;
+}
+.biography_panel div img {
+    height: 400px;
+    width: 350px;
+}
+.biography_panel .texto_biography{
+    text-align: justify;
+    margin: 1em 24em 0em 24em;
+    line-height: 1.5;
+    font-size: medium;
+    position: relative;
+    display: inline-block;
+}
+.biography_panel .texto_biography::after{
+    content: '';
+    position: absolute;
+    left: 21%;
+    transform: translateX(-50%);
+    bottom: -3rem;
+    width: 40%; 
+    border-bottom: 2px solid rgb(248, 75, 208);
+}
+
+/*expectativa vs realidad*/
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+.vs {
+    color: #ff1493; 
+}
+
+/* Estilos para el resumen */
+.summary {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    text-align: justify;
+    margin-bottom: 30px;
+    font-style: "Klint Regular";
+    color: #666;
+}
+
+/* Estilos para las imágenes */
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.image-container img {
+    width: 350px; 
+    margin: 0 10px;
+}
+
+/* Estilos para los párrafos debajo de las imágenes */
+.text-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-container .column {
+    flex: 1;
+    max-width: 350px; 
+}
+
+.text-container .column p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.text-container {
+    max-width: 800px; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; 
+    color: #666;
+}
+
+/*motivacion y video*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.video-container {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    align-self: flex-start; 
+    margin-top: 30px;
+}
+
+.video-container iframe {
+    display: block;
+    margin: auto;
+}
+
+.text-container {
+    flex: 1 1 auto;
+}
+
+.text-container h2 {
+    text-align: center;
+}
+
+.texto_biography {
+    text-align: justify;
+}
+
+.text-container .column {
+    flex: 1;
+    margin: 0 40px;
+}
+
+.text-container .column p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/*habilidades y debilidades*/
+
+#skills {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+#div4 {
+    margin-right: 2rem;
+}
+
+#imagen_habilidades {
+    width: 50%; 
+    margin-top: 100px;
+}
+
+/*gustos y pasatiempos*/
+
+
+#skills {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+#div6 {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; 
+}
+
+#div4 {
+    width: 50%; 
+    margin-right: 2rem;
+}
+
+#imagen_habilidades {
+    width: 50%;
+}
+
+#imagen_dificultades img {
+    margin-left: 50px;
+}
+#div6 {
+    display: flex;
+    align-items: center;
+}
+.vertical-title {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    white-space: nowrap;
+    transform: rotate(180deg);
+    margin-right: 40px; 
+    text-align: center;
+    color: #666;
+}
+
+#div4 {
+    margin-left: 50px; 
+    text-align: justify;
+    color: #666;
+}
+
+#basic {
+    text-align: center;
+}
+
+#basic h2, #basic h3 {
+    color: #666;
+}
+
+#dreams {
+    text-align: center;
+    color: #666; 
+}
+
+.title_dreams {
+    margin-bottom: -250px; 
+}
+
+.texto_dreams {
+    text-align: justify;
+    margin: 0 auto; 
+    max-width: 800px;
+}
+
+
+#div2 {
+    display: block;
+    width: 47%;
+    border-left: 2px solid rgb(248, 75, 208);
+}
+#div2 h2{
+    padding-left: 5rem;
+    padding-top: 1rem;
+    font-family: "Klint Bold";
+    font-style: normal;
+    font-size: x-large;
+}
+#div2 p{
+    margin:0;
+    padding-left: 5rem;
+    padding-right: 1rem;
+    text-align: left;
+    line-height: 1.5;
+}
+#div3 img{
+    height: 300px;
+    width: 400px;
+}
+#div4{
+    display: flex;
+    width: 50%;
+    padding-top: 2rem;
+}
+#div4 div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#div4 div h2{ 
+    text-align: center;
+    padding-left: 2rem;
+    font-family: "Klint Bold";
+    font-style: normal;
+    font-size: x-large;
+}
+#div5{
+    margin-left: 5rem;
+    border-left: 2px solid rgb(248, 75, 208);
+}
+#div4 div p{ 
+    padding-left: 3rem;
+    padding-right: 3rem;
+    line-height: 1.5;
+}
+
+
+ .button-container {
+    display: flex;
+    justify-content: space-around; 
+}
+
+.button-container button {
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px; 
+    cursor: pointer;
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+}
+
+.button-container button:hover {
+    background-color:  #ff1493;
+}
+
+.boton-volver {
+    position: fixed; 
+    bottom: 20px;
+    right: 20px; 
+    padding: 10px 20px;
+    background-color: var(--defaultBackground, #ff69b4); 
+    color: white;
+    text-decoration: none; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    z-index: 1000;
+  }
+  
+.boton-volver:hover {
+    background-color: var(--hoverBackground, #ff69b4);
+  }
+
+.botonn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #ff69b4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botonn:hover {
+    background-color: #ff1493;
+}
